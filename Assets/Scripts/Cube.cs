@@ -6,13 +6,12 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    [SerializeField] private Cube _prefab;
     [SerializeField] private MeshRenderer _meshRenderer;
 
-    private const int MinValue = 2;
-    private const int MaxValue = 7;
-    private const int DecreaseNumber = 2;
-    private const int RandomMaxValue = 101;
+    private int MinValue = 2;
+    private int MaxValue = 6;
+    private int DecreaseNumber = 2;
+    private int RandomMaxValue = 100;
     private float _chanceSeparation = 100;
 
     private void OnMouseDown()
@@ -21,25 +20,7 @@ public class Cube : MonoBehaviour
         CreateCube();
     }
 
-    public void CreateCube()
-    {       
-        int quantity = UnityEngine.Random.Range(MinValue, MaxValue);
-        float random = UnityEngine.Random.Range(0, RandomMaxValue);
-
-        if (_chanceSeparation >= random)
-        {
-            _chanceSeparation /= DecreaseNumber;
-
-            for (int i = 0; i < quantity; i++)
-            {
-                Cube cube = Instantiate(_prefab, transform.position, transform.rotation);
-
-                cube.SetOptions(_chanceSeparation, cube);
-            }
-        }
-    }
-
-    private void SetOptions(float chance, Cube cube)
+    public void SetOptions(float chance, Cube cube)
     {
         _chanceSeparation = chance;
 
@@ -47,5 +28,23 @@ public class Cube : MonoBehaviour
         cube.transform.localScale = scale;
 
         _meshRenderer.material.color = UnityEngine.Random.ColorHSV();
+    }
+
+    private void CreateCube()
+    {       
+        int quantity = UnityEngine.Random.Range(MinValue, MaxValue + 1);
+        float random = UnityEngine.Random.Range(0, RandomMaxValue + 1);
+
+        if (_chanceSeparation >= random)
+        {
+            _chanceSeparation /= DecreaseNumber;
+
+            for (int i = 0; i < quantity; i++)
+            {
+                Cube cube = Instantiate(this, transform.position, transform.rotation);
+
+                cube.SetOptions(_chanceSeparation, cube);
+            }
+        }
     }
 }

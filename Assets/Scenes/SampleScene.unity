@@ -223,7 +223,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.5754876, y: -1.7996159, z: 4.514432}
-  m_LocalScale: {x: 1, y: 5, z: 15}
+  m_LocalScale: {x: 1, y: 7, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1181834842}
@@ -374,7 +374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c462cf62b0494418f17366f833d472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 6610855806558584989, guid: 642ad1b1292f8554cbf1984d22b4e585, type: 3}
   _meshRenderer: {fileID: 392425845}
 --- !u!1 &407467926
 GameObject:
@@ -476,7 +475,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.4245124, y: -1.7996159, z: -3.485568}
-  m_LocalScale: {x: 1, y: 5, z: 15}
+  m_LocalScale: {x: 1, y: 7, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1181834842}
@@ -675,7 +674,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.424513, y: -1.7996159, z: 4.514432}
-  m_LocalScale: {x: 1, y: 5, z: 15}
+  m_LocalScale: {x: 1, y: 7, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1181834842}
@@ -872,7 +871,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.4245124, y: -1.7996159, z: 12.514432}
-  m_LocalScale: {x: 1, y: 5, z: 15}
+  m_LocalScale: {x: 1, y: 7, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1181834842}
@@ -945,7 +944,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c462cf62b0494418f17366f833d472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 6610855806558584989, guid: 642ad1b1292f8554cbf1984d22b4e585, type: 3}
   _meshRenderer: {fileID: 1249897337}
 --- !u!54 &1249897335
 Rigidbody:
@@ -1198,7 +1196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c462cf62b0494418f17366f833d472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 6610855806558584989, guid: 642ad1b1292f8554cbf1984d22b4e585, type: 3}
   _meshRenderer: {fileID: 1987079651}
 --- !u!54 &1987079649
 Rigidbody:
