@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
     [SerializeField] private MeshRenderer _meshRenderer;
+    [SerializeField] private Explosion _explosion;
 
     private int MinValue = 2;
     private int MaxValue = 6;
@@ -27,13 +24,13 @@ public class Cube : MonoBehaviour
         Vector3 scale = transform.localScale / DecreaseNumber;
         cube.transform.localScale = scale;
 
-        _meshRenderer.material.color = UnityEngine.Random.ColorHSV();
+        _meshRenderer.material.color = Random.ColorHSV();
     }
 
     private void CreateCube()
     {       
-        int quantity = UnityEngine.Random.Range(MinValue, MaxValue + 1);
-        float random = UnityEngine.Random.Range(0, RandomMaxValue + 1);
+        int quantity = Random.Range(MinValue, MaxValue + 1);
+        float random = Random.Range(0, RandomMaxValue + 1);
 
         if (_chanceSeparation >= random)
         {
@@ -44,7 +41,13 @@ public class Cube : MonoBehaviour
                 Cube cube = Instantiate(this, transform.position, transform.rotation);
 
                 cube.SetOptions(_chanceSeparation, cube);
+
+                cube._explosion.IncreaseForceExplosian();
             }
+        }
+        else
+        {
+            _explosion.Explode();
         }
     }
 }
